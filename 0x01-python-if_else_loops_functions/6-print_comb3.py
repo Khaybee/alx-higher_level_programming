@@ -6,5 +6,3 @@ for a in range(10):
             print("{:d}{:d}".format(a, b))
         else:
             print("{:d}{:d}, ".format(a, b), end="")
-
-print()
