@@ -96,7 +96,7 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
-        """Update the Rectangle.
+        """Updates the Rectangle.
 
         Args:
             *args (ints): New attribute values.
