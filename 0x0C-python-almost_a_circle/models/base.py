@@ -57,7 +57,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Return the deserialization of a JSON string.
+        """Returns the deserialization of a JSON string.
 
         Args:
             json_string (str): A JSON str representation of a list of dicts.
