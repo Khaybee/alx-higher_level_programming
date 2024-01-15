@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Lists all State objects and corresponding City objects in
-the database hbtn_0e_101_usa
+""" prints the State object with the name passed as argument from the database
 """
 import sys
 from relationship_state import Base, State
@@ -17,8 +15,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states_cities = session.query(State).order_by(State.id)
-    for state in states_cities:
-        print("{}: {}".format(state.id, state.name))
+    cities_states = session.query(State).order_by(State.id)
+    for state in cities_states:
         for city in state.cities:
-            print("\t{}: {}".format(city.id, city.name))
+            print(city.id, city.name, sep=": ", end="")
+            print(" -> " + state.name)
